@@ -2,7 +2,7 @@ import axios from 'axios'
 Object.defineProperties(axios, {
   $context: {
     get() {
-      return '/api'
+      return process.env.NODE_ENV==='development'?'/api':'https://jsonplaceholder.typicode.com'
     }
   }
 })

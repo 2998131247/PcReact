@@ -10,7 +10,7 @@ const test2= Loadable({
 });
 
 export default [
-    { path: '/', component: test1, exact: true },
+    { path: '/', component: test1, exact: process.env.NODE_ENV==='development'? true :false },
     { path: '/test2', component: test2 }
   ]
 
